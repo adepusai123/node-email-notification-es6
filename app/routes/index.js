@@ -1,7 +1,7 @@
 import express from 'express';
+import mailer from './mailer';
 const Router = express.Router();
 
-Router.get('/',(req, res)=>{
-    res.send("Hello World !");
-});
+Router.use('/mailer', mailer);
+
 export default Router;

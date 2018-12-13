@@ -1,0 +1,16 @@
+version: '3'
+services:
+  app:
+    build: .
+    image: registry.gitlab.com/pricewaterhousecoopers/email-notification-services:latest
+    container_name: dev_email_notification_services
+    restart: always
+    command: bash -c "yarn run server"
+    volumes:
+      - .:/app
+    ports:
+      - "3003:3003"
+    stdin_open: true
+    tty: true
+    environment:
+      ASSET_HOST: http://localhost:3003

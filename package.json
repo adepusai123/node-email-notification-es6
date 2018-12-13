@@ -1,0 +1,48 @@
+{
+  "name": "node-email-notification-es6",
+  "version": "1.0.0",
+  "description": "Email notification service with Jade template engine",
+  "main": "server.js",
+  "scripts": {
+    "test": "NODE_ENV=test  mocha test --require babel-register --recursive",
+    "code_coverage": "NODE_ENV=test  istanbul cover --report html _mocha  -- --recursive --require babel-register",
+    "code_quality": "plato -r -d reports/plato app server.js",
+    "server": "nodemon /app/bin/www --exec babel-node --presets babel-preset-env"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adepusai123/node-email-notification-es6.git"
+  },
+  "keywords": [
+    "email",
+    "notifications",
+    "nodemailer",
+    "jade",
+    "node",
+    "etc"
+  ],
+  "author": "Sai Kumar A <adepusai123@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.18.3",
+    "config": "3.0.0",
+    "cors": "2.8.5",
+    "express": "4.16.4",
+    "morgan": "1.9.1",
+    "swagger-jsdoc": "^3.2.6",
+    "swagger-ui-express": "4.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "6.26.0",
+    "babel-preset-env": "1.7.0",
+    "babel-register": "6.26.0",
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "istanbul": "0.4.5",
+    "mocha": "3.4.2",
+    "mocha-junit-reporter": "1.18.0",
+    "nodemon": "1.18.8",
+    "plato": "1.7.0",
+    "supertest": "3.3.0"
+  }
+}
